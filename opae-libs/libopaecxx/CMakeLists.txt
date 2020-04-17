@@ -43,6 +43,7 @@ opae_add_shared_library(TARGET opae-cxx-core
     VERSION ${OPAE_VERSION}
     SOVERSION ${OPAE_VERSION_MAJOR}
     COMPONENT opaecxxcorelib
+	LIBS opae-c
 )
 
 opae_add_executable(TARGET hello_cxxcore

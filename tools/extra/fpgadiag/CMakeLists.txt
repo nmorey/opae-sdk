@@ -42,7 +42,8 @@ opae_add_shared_library(TARGET opae-c++-nlb
         diag_utils.cpp
     LIBS
         opae-c
-        opae-cxx-core 
+        opae-cxx-core
+		opae-c++-utils
     VERSION ${OPAE_VERSION}
     SOVERSION ${OPAE_VERSION_MAJOR}
     COMPONENT opaecxxnlb
@@ -126,7 +127,6 @@ if (SUPPORTS_VFIO)
     if(CMAKE_CXX_COMPILER_VERSION VERSION_LESS 5.0)
        set_source_files_properties(eth_group.cpp  PROPERTIES COMPILE_FLAGS -fno-lto)
     endif()
-    pybind11_add_module(eth_group THIN_LTO  eth_group.cpp)
 else(SUPPORTS_VFIO)
     message(WARNING
         "Could not compile VFIO. See errors in vfio_errors.txt")
