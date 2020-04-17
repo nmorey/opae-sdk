@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ Extrats section for use in fpgaflash that contains:
     0x010000 to 0x01FFFF     : pfl option_bits
     0x020000 to 0x0381FFFF   : S10 factory image page0
