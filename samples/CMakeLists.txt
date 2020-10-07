@@ -32,6 +32,11 @@ include_directories(${OPAE_INCLUDE_DIR}
   ${OPAE_SDK_SOURCE}/libopae/src )
 include_directories(base/sw)
 
+if (OPAE_OBS_BUILD)
+    add_definitions("-DSPDLOG_FMT_EXTERNAL")
+    link_libraries(fmt)
+endif()
+
 if(BUILD_ASE_SAMPLES)
   find_package(Quartus)
   find_package(Questa)

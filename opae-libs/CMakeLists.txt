@@ -52,6 +52,9 @@ find_package(PythonLibs ${OPAE_PYTHON_VERSION})
 option(OPAE_BUILD_TESTS "Enable building of OPAE unit tests" OFF)
 mark_as_advanced(OPAE_BUILD_TESTS)
 
+option(OPAE_OBS_BUILD "Build through SUSE OBS and do not fetch remote packages." OFF)
+mark_as_advanced(OPAE_OBS_BUILD)
+
 include(OPAE)
 
 get_property(LIB64 GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS)
